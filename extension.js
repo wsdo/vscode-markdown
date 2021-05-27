@@ -42,7 +42,6 @@ function starkFun() {
 
 function start() {
   try {
-    adasda
     // 获取当前编辑文件
     let editor = vscode.window.activeTextEditor;
     if (!editor) return;
