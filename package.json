@@ -2,7 +2,7 @@
 	"name": "markdown",
 	"displayName": "markdown",
 	"description": "Markdown Paste Image To Qiniu OSS store",
-	"version": "1.1.8",
+	"version": "1.1.9",
   "publisher": "starkwang",
 	"engines": {
 		"vscode": "^1.56.0"
@@ -40,7 +40,48 @@
 				"mac": "cmd+alt+v",
 				"when": "editorTextFocus"
 			}
-		]
+		],
+    "configuration": {
+      "type": "object",
+      "title": "qiniu configuration",
+      "properties": {
+        "qiniu.access_key": {
+          "type": "string",
+          "default": "",
+          "description": "AccessKey"
+        },
+        "qiniu.secret_key": {
+          "type": "string",
+          "default": "",
+          "description": "SecretKey"
+        },
+        "qiniu.bucket": {
+          "type": "string",
+          "default": "",
+          "description": "bucket"
+        },
+        "qiniu.remotePath": {
+          "type": "string",
+          "default": "${fileName}",
+          "description": "remotePath"
+        },
+        "qiniu.domain": {
+          "type": "string",
+          "default": "",
+          "description": "domain"
+        },
+        "qiniu.isSaveLocal": {
+          "type": "boolean",
+          "default": false,
+          "description": "is Save Local"
+        },
+        "qiniu.localPath": {
+          "type": "string",
+          "default": "./img",
+          "description": "图片本地保存位置"
+        }
+      }
+    }
 	},
 	"scripts": {
 		"lint": "eslint .",
