@@ -84,8 +84,8 @@ function start() {
           name,
           url
         }) => {
-          vscode.window.showInformationMessage('上传成功');
-          // vscode.window.setStatusBarMessage("Upload success",3000);
+          // vscode.window.showInformationMessage('上传成功');
+          vscode.window.setStatusBarMessage("上传成功", 3000);
           const img = `![${name}](${url})`;
           editor.edit(textEditorEdit => {
             textEditorEdit.insert(editor.selection.active, img)
